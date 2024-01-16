@@ -12,7 +12,7 @@ header img {
 }
 
 header {
-    background-color: #D0CFCF;
+    background: linear-gradient(to right, #208AAE, #0D2149);
     padding: 20px 0;
 }
 
@@ -71,15 +71,16 @@ button:hover {
     text-align: left;
 }
 
-#features,
+#signup,
 #how-it-works,
-#testimonials,
+#hero,
+#birthchart,
 #contact {
-    padding: 80px 0;
+    padding: 30px 0;
     background-color: #FFFBFE;
 }
 
-#features h2,
+#signup h2,
 #how-it-works h2,
 #testimonials h2,
 #contact h2 {
@@ -112,5 +113,4 @@ button:hover {
 }
 
 #contactForm button:hover {
-    background-color: #565254;
-}
+    background-color: #565254;}
