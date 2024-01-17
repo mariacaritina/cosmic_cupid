@@ -1,0 +1,43 @@
+#birthchart {
+    padding: 30px 0;
+    background-color: #FFFBFE;
+}
+
+#birthchart h2 {
+    color: #7A7D7D;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    color: #7A7D7D;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #7A7D7D;
+    color: #FFFDFE;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #565254;
+}
