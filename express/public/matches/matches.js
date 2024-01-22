@@ -24,7 +24,9 @@ fetch("http://localhost:3000/users")
     createFeed()
 })
 
-
+function loadChat() { 
+    window.location.href="/chats"
+}
 
   function createFeed() {
 
@@ -33,6 +35,7 @@ const peopleList = document.getElementById('people-list');
 peopleData.forEach((person, index) => {
   const personElement = document.createElement('div');
   personElement.classList.add('person');
+personElement.onclick = loadChat
 
   const imageElement = document.createElement('img');
   imageElement.src = person.profilepic;
@@ -51,7 +54,7 @@ peopleData.forEach((person, index) => {
 
   const ageElement = document.createElement('p');
   ageElement.classList.add('person-age');
-  ageElement.textContent = `Birthday: ${person.birthday}`;
+  ageElement.textContent = `Birthday: ${person.birthdate}`;
 
   const risingSignElement = document.createElement('p')
   risingSignElement.textContent = `Rising Sign: ${person.risingsign}`
