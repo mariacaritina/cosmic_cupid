@@ -26,7 +26,7 @@ app.get("/birthchart", (req, res) => {
 })
 
 app.get("/chats", (req, res) => { 
-    res.sendFile(path.join(__dirname, '/public/chats/c.html'))
+    res.sendFile(path.join(__dirname, '/public/chat_app/chat.html'))
 })
 
 app.get("/matches", (req, res) => { 
