@@ -1,0 +1,42 @@
+.container {
+    text-align: center;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFFDFE;
+    color: #565254;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .person {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .person-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .person-info {
+    flex-grow: 1;
+  }
+  
+  .person-name {
+    margin: 0;
+  }
+  
+  .person-age {
+    margin: 5px 0;
+    color: #888;
+  }

@@ -10,7 +10,7 @@
 
     <header>
         <div class="container">
-            <img src="/login_page/images/cosmic_cupid.png" alt="Cosmic Cupid Logo">
+            <a href="/"><img src="/login_page/images/cosmic_cupid.png" alt="Cosmic Cupid Logo"></a>
             <nav>
                 <ul>
                     <li><a href="/signup">Sign Up</a></li>
@@ -27,17 +27,17 @@
         <div class="container">
             <h2>Login</h2>
             <form id="loginForm">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required>
 
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
 
-                <button type="submit">Login</button>
             </form>
+            <button onclick="logIn()">Login</button>
         </div>
     </section>
 
-    <script src="lp.js"></script>
+    <script src="/login_page/lp.js"></script>
 </body>
 </html>
