@@ -1,34 +1,127 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #FFFDFE;
+  color: #565254;
+}
+
+header img { 
+  max-width: 250px; 
+  height: auto;
+}
+
+header {
+  background: linear-gradient(to right, #208AAE, #0D2149);
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #7A7D7D;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#hero {
+  background-color: #FFFBFE;
+  padding: 100px 0;
+}
+
+#hero h2 {
+  color: #7A7D7D;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #7A7D7D;
+  color: #FFFDFE;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #565254;
+}
+
+.container {
+  text-align: center;
+}
+
+#how-it-works ol { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  text-align: left;
+}
+
+#signup,
+#how-it-works,
+#hero,
+#birthchart,
+#contact {
+  padding: 30px 0;
+  background-color: #FFFBFE;
+}
+
+#signup h2,
+#how-it-works h2,
+#testimonials h2,
+#contact h2 {
+  color: #7A7D7D;
+}
+
+.feature {
+  margin-bottom: 40px;
+}
+
 /* styles.css */
 body {
-    background-color: #d1e8e2; /* Light blue background */
-    font-family: 'Arial', sans-serif; /* Sans-serif font */
-    color: #003366; /* Dark blue text color */
-  }
-  
-  table {
-    width: 70%;
-    margin: auto;
-    background-color: #cce5ff; /* Medium blue table background */
-    border: 2px solid #003366; /* Dark blue border */
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  td, th {
-    border: 2px solid #003366; /* Dark blue border for table cells */
-    padding: 8px;
-    text-align: center;
-  }
-  
-  input[type="text"], input[type="button"] {
-    padding: 8px;
-    margin: 4px;
-    border: 1px solid #003366; /* Dark blue border for input elements */
-    background-color: #cce5ff; /* Medium blue background for input elements */
-  }
-  
-  input[type="button"] {
-    background-color: #003366; /* Dark blue background for the Calculate button */
-    color: #ffffff; /* White text color for the Calculate button */
-    cursor: pointer;
-  }
+  background-color: #d1e8e2; /* Light blue background */
+  font-family: 'Arial', sans-serif; /* Sans-serif font */
+  color: #003366; /* Dark blue text color */
+}
+
+table {
+  width: 70%;
+  margin: auto;
+  background-color: #cce5ff; /* Medium blue table background */
+  border: 2px solid #003366; /* Dark blue border */
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+td, th {
+  border: 2px solid #003366; /* Dark blue border for table cells */
+  padding: 8px;
+  text-align: center;
+}
+
+input[type="text"], input[type="button"] {
+  padding: 8px;
+  margin: 4px;
+  border: 1px solid #003366; /* Dark blue border for input elements */
+  background-color: #cce5ff; /* Medium blue background for input elements */
+}
+
+input[type="button"] {
+  background-color: #003366; /* Dark blue background for the Calculate button */
+  color: #ffffff; /* White text color for the Calculate button */
+  cursor: pointer;
+}
