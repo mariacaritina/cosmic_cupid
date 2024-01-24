@@ -30,7 +30,7 @@ function registerUser() {
     .then( response => {
         if(response.status === 200) {
             alert("Sign up successful!")
-            window.location.href = "/"
+            window.location.assign("http://localhost:3000/birthchart")
         } else {
             alert("Something went wrong")
         }

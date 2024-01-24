@@ -38,7 +38,7 @@ peopleData.forEach((person, index) => {
 personElement.onclick = loadChat
 
   const imageElement = document.createElement('img');
-  imageElement.src = person.profilepic;
+  imageElement.src = person.profilepic ?? "people/placeholder.jpg";
   imageElement.alt = `Person ${index + 1}`;
   imageElement.classList.add('person-image');
 

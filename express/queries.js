@@ -15,33 +15,45 @@ async function getUser (req, res) {
     const userID = req.params.id
     await pool.query('SELECT * FROM matches WHERE id = $1', [userId], (error, results) => { 
         if(error) { 
-         throw error
+            console.error(error.message)
+            res.status(500).send("Internal server error")
         }
-        res.status(200).json(results.rows)
+
+        if(results.rows.length > 0) {
+            res.status(200).json(results.rows)
+        } else {
+            response.sendStatus(404)
+        }
     })
 }
 
 async function getUsers(req, res) {
     await pool.query('SELECT * FROM users', (error, results) => {
         if(error) {
-            throw error
+            console.error(error.message)
+            res.status(500).send("Internal server error")
         }
         res.status(200).json(results.rows)
     })
 }
 
 async function loginUsers (req, res) { 
-    const  email = req.body.email 
+    const email = req.body.email 
     const password = req.body.password
 
     await pool.query('SELECT * FROM users WHERE email = $1 AND password = $2', [email,password], (error, results) => { 
         if (error) {
-            throw error
+            console.error(error.message)
+            res.status(500).send("Internal server error")
         }
         //do logging stuff
-        console.log(results.rows[0].id)
-        const token = tokenManager.generateAccessToken(results.rows[0].id)
-        res.status(200).json(token)    
+        if(results.rows.length > 0) {
+            console.log(results.rows[0].id)
+            const token = tokenManager.generateAccessToken(results.rows[0].id)
+            res.status(200).json(token)    
+        } else {
+            res.status(401).send("Invalid email or password.")
+        }
     })
 }
 
@@ -58,9 +70,10 @@ async function registerUser (req, res) {
 
     await pool.query('INSERT INTO users (email, password, firstname, lastname, sunsign, moonsign, risingsign, birthdate, choice) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)', [email, password, firstname, lastname, sunsign, moonsign, risingsign, birthdate, choice], (error, result) => { 
         if (error) {
-        throw error
-    }
-    res.status(200).send("User Added")
+            console.error(error.message)
+            res.status(500).send("Internal server error")
+        }
+        res.status(200).send("User Added")
     })    
 }
 

@@ -5,19 +5,28 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 });
 
 function logIn() { 
-let email = document.getElementById ("email").value
-let password = document.getElementById ("password").value
+let email = document.getElementById ("email").value.trim()
+let password = document.getElementById ("password").value.trim()
 
 fetch ("http://localhost:3000/login" ,{
 headers:{"Content-Type": "application/json"}, 
 body:JSON.stringify({"email":email,"password":password}),
 method:"POST"
 })
-.then(response=>{
+.then(response => {
+    if(response.status === 401) {
+        throw new Error("Incorrect email or password.")
+    } else {
+        throw new Error("Internal server error.")
+    }
+
     return response.json()
 })
 .then(json => {
     document.cookie=json
     console.log(json)
-})
+    window.location.assign(
+        "http://localhost:3000/matches"
+    )
+}).catch(error => alert(error.message))
 } 
