@@ -14,11 +14,11 @@ body:JSON.stringify({"email":email,"password":password}),
 method:"POST"
 })
 .then(response => {
-    if(response.status === 401) {
-        throw new Error("Incorrect email or password.")
-    } else {
-        throw new Error("Internal server error.")
-    }
+    // if(response.status === 401) {
+    //     throw new Error("Incorrect email or password.")
+    // } else {
+    //     throw new Error("Wrong credentials.")
+    // }
 
     return response.json()
 })
